@@ -1,8 +1,10 @@
-💳 Credit Card Fraud Risk Dashboard
+## 💳 Credit Card Fraud Risk Dashboard
 
 An end-to-end fraud analytics project combining machine learning, risk monitoring, business impact analysis, and explainable AI — delivered through an interactive Streamlit dashboard.
 
-📌 Table of Contents
+---
+
+## 📌 Table of Contents
 
 Overview
 
@@ -38,9 +40,9 @@ Limitations
 
 Future Improvements
 
+---
 
-
-🔍 Overview
+## 🔍 Overview
 
 Credit card fraud is a low-frequency, high-severity risk that requires accurate detection, interpretability, and operational decisioning.
 
@@ -56,7 +58,9 @@ Explains individual fraud predictions using SHAP
 
 The result is a real-world simulation of how fraud analytics teams operate inside financial institutions.
 
-💼 Business Problem
+---
+
+## 💼 Business Problem
 
 Financial institutions must:
 
@@ -70,7 +74,10 @@ Explain model decisions to regulators and stakeholders
 
 This project focuses on balancing fraud prevention and customer friction, not just model accuracy.
 
-🧠 Solution Approach
+---
+
+
+## 🧠 Solution Approach
 
 Transaction-level risk scoring using a Random Forest classifier
 
@@ -81,6 +88,26 @@ Interactive filtering to simulate analyst workflows
 Explainable AI (SHAP) for transparency and trust
 
 Business impact estimation to quantify decision trade-offs
+
+---
+
+## 🔬 Analysis & Modeling (Google Colab)
+
+All data exploration, feature analysis, and model development were performed
+in Google Colab to enable reproducibility and ease of experimentation.
+
+The notebook includes:
+- Exploratory Data Analysis (EDA)
+- Fraud vs non-fraud pattern analysis
+- Feature-level risk insights
+- Baseline and tree-based model training
+- Model evaluation and interpretation
+- Model artifact export for dashboard use
+
+📓 **Google Colab Notebook**:  
+https://colab.research.google.com/drive/1COpoRVLiDCZMurJdO_NjzjI38-GOG7lm?usp=sharing
+
+---
 
 ✨ Key Features
 
@@ -95,6 +122,8 @@ Business impact estimation to quantify decision trade-offs
 💰 Fraud loss vs customer friction estimation
 
 ☁️ Cloud-ready deployment with large dataset handling
+
+---
 
 🖥️ Dashboard Preview
 
@@ -112,6 +141,8 @@ Decision strategy recommendations
 
 Built with Streamlit for fast, interactive analytics.
 
+---
+
 📂 Data
 
 Public credit card transaction dataset
@@ -120,9 +151,13 @@ Highly imbalanced fraud vs non-fraud classes
 
 Dataset size exceeds GitHub limits
 
+---
+
 📌 Note:
 The dataset is not stored in the repository.
 It is downloaded securely from Google Drive at runtime.
+
+---
 
 🤖 Modeling
 
@@ -135,6 +170,8 @@ Focus: Interpretability over complex modeling
 Output: Transaction-level fraud risk score
 
 Model artifacts are stored as serialized files (.joblib) for reuse.
+
+---
 
 🧠 Explainability (SHAP)
 
@@ -150,7 +187,9 @@ Negative SHAP values reduce fraud risk
 
 This mirrors real-world regulatory and stakeholder requirements.
 
-💰 Business Impact
+---
+
+## 💰 Business Impact
 
 The dashboard estimates:
 
@@ -166,7 +205,9 @@ Risk appetite trade-offs
 
 Operational strategy
 
-📁 Project Structure
+---
+
+## 📁 Project Structure
 Fraud_Dashboard/
 │
 ├── app.py                 # Streamlit dashboard application
@@ -174,7 +215,9 @@ Fraud_Dashboard/
 ├── requirements.txt       # Python dependencies
 ├── README.md              # Project documentation
 
-🧰 Tech Stack
+---
+
+## 🧰 Tech Stack
 
 Python
 
@@ -194,7 +237,9 @@ Joblib
 
 Google Drive (dataset hosting)
 
-⚙️ Installation & Setup
+---
+
+## ⚙️ Installation & Setup
 1️⃣ Clone the repository
 git clone <your-repo-url>
 cd Fraud_Dashboard
@@ -210,7 +255,9 @@ Open your browser at:
 
 http://localhost:8501
 
-☁️ Deployment
+---
+
+## ☁️ Deployment
 
 The app is compatible with Streamlit Community Cloud.
 
@@ -224,7 +271,9 @@ Deploy directly from the main branch
 
 Large datasets are handled dynamically and do not block deployment.
 
-🧩 Design Decisions
+---
+
+## 🧩 Design Decisions
 
 Used Random Forest for interpretability and stability
 
@@ -234,7 +283,9 @@ Focused on business metrics, not just accuracy
 
 Built modular, cloud-friendly architecture
 
-⚠️ Limitations
+---
+
+## ⚠️ Limitations
 
 Uses historical transaction data
 
@@ -244,7 +295,9 @@ Assumes static model (no retraining pipeline)
 
 These trade-offs were intentional for clarity and interpretability.
 
-🚀 Future Improvements
+---
+
+## 🚀 Future Improvements
 
 Real-time fraud scoring simulation
 
@@ -256,3 +309,41 @@ Model retraining pipeline
 
 Alert workflow integration
 
+---
+
+## 🔁 End-to-End Workflow
+
+1. **Data Exploration & Feature Analysis**
+   - Conducted in Google Colab
+   - Focused on transaction amount, time patterns, and anomaly signals
+
+2. **Model Development**
+   - Trained a Random Forest classifier
+   - Addressed class imbalance
+   - Prioritized interpretability over complexity
+
+3. **Model Export**
+   - Trained model serialized using `joblib`
+   - Exported for downstream dashboard usage
+
+4. **Dashboard Development**
+   - Built an interactive Streamlit application
+   - Implemented risk tiering and SHAP-based explanations
+
+5. **Deployment**
+   - Dataset loaded dynamically from Google Drive
+   - App deployable on Streamlit Community Cloud
+
+---
+
+## 📌 Reproducibility & Transparency
+
+This project separates **analysis** and **application layers**:
+
+- **Analysis Layer**: Google Colab notebook  
+- **Application Layer**: Streamlit dashboard  
+
+This separation mirrors real-world analytics workflows and ensures:
+- Clear experimentation history
+- Reproducible modeling
+- Clean production-style deployment
